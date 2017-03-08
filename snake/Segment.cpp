@@ -1,26 +1,16 @@
 #include "Segment.h"
 
-Segment::Segment() {
-
-
-}
-
-Segment::~Segment(){
-
-
-}
-
-void Segment::setDirection(char direction) {
-	this->direction = direction;
+void Segment::setDirection(char value) {
+	direction = value;
 }
 
 char Segment::getDirection() {
 	return direction;
 }
 
-char Segment::getPrevDirection() {
-	return prevDirection;
-}
+//char Segment::getPrevDirection() {
+//	return prevDirection;
+//}
 
 void Segment::setX(int value) {
 	x = value;
@@ -37,13 +27,9 @@ void Segment::setNewY(int value) {
 	newY = value;
 }
 
-void Segment::setPrevDirection(char value) {
-	prevDirection = value;
-}
-
-void Segment::setDirection(char value) {
-	direction = value;
-}
+//void Segment::setPrevDirection(char value) {
+//	prevDirection = value;
+//}
 
 int Segment::getX(){
 	return x;

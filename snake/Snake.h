@@ -3,14 +3,24 @@
 
 class Snake{
 private:
-	int length = 1;
-	Segment* segments = new Segment[15];
+	int numberOfSegments = 0;
+	Segment* segments = new Segment[10];
 
+	void moveHead(char);
+	void moveBody();
+
+	void generateHead();
+	void generateSegment();
 
 public:
 	Snake();
 	~Snake();
-	void moveHead();
-	void moveBody();
+
+	Segment* getSnakeSegments();
+	//Segment getSnakeHead();
+
+	void moveSnake(char);
+	
+	int getNumberOfSegments();
 };
 
