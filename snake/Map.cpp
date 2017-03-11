@@ -94,6 +94,6 @@ void Map::generateFood() {
 
 }
 
-Snake Map::getSnake() {
+Snake& Map::getSnake() {
 	return snake;
 }

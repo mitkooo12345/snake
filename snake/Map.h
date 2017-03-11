@@ -14,6 +14,6 @@ public:
 	Map();
 	void drawMap();
 	void generateFood();
-	Snake getSnake();
+	Snake& getSnake();
 
 };
