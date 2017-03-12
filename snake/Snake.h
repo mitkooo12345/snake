@@ -4,7 +4,7 @@
 class Snake{
 private:
 	int numberOfSegments = 0;
-	Segment* segments = new Segment[10];
+	Segment* segments = new Segment[20];
 
 	void moveHead(char);
 	void moveBody();
@@ -17,10 +17,10 @@ public:
 	~Snake();
 
 	Segment* getSnakeSegments();
-	//Segment getSnakeHead();
+	Segment getSnakeHead();
 
 	void moveSnake(char);
-	
 	int getNumberOfSegments();
+	void addSegment();
 };
 

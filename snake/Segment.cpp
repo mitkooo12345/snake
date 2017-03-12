@@ -8,9 +8,9 @@ char Segment::getDirection() {
 	return direction;
 }
 
-//char Segment::getPrevDirection() {
-//	return prevDirection;
-//}
+char Segment::getPrevDirection() {
+	return prevDirection;
+}
 
 void Segment::setX(int value) {
 	x = value;
@@ -27,9 +27,9 @@ void Segment::setNewY(int value) {
 	newY = value;
 }
 
-//void Segment::setPrevDirection(char value) {
-//	prevDirection = value;
-//}
+void Segment::setPrevDirection(char value) {
+	prevDirection = value;
+}
 
 int Segment::getX(){
 	return x;

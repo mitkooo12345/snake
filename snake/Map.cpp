@@ -12,6 +12,7 @@ void Map::drawMap() {
 
 	system("cls");
 
+	std::cout << "Score: " << score << "  " << "Goal: " << "20" << std::endl << std::endl;
 
 	int counter = 0;
 	int numberOfSegments = snake.getNumberOfSegments();
@@ -90,10 +91,49 @@ void Map::generateFood() {
 		foodY = rand() % 20 + 2;
 
 	} while ((segments[0].getNewX() == foodX) && (segments[0].getNewY() == foodY));
-
-
 }
 
 Snake& Map::getSnake() {
 	return snake;
+}
+
+int Map::getMapSize() {
+	return mapSize;
+}
+
+void Map::loseGame() {
+	std::cout << "You lost!" << std::endl;
+}
+
+void Map::winGame() {
+	std::cout << "You won!" << std::endl;
+}
+
+void Map::growSnake() {
+	generateFood();
+	snake.addSegment();
+	score++;
+}
+
+int Map::getFoodX() {
+	return foodX;
+}
+
+int Map::getFoodY() {
+	return foodY;
+}
+
+bool Map::isCollided() {
+	int numberOfSegments = snake.getNumberOfSegments() - 1;
+	for (int i = 1; i < numberOfSegments; i++) {
+		if ((snake.getSnakeHead().getX() == segments[i].getX()) && (snake.getSnakeHead().getY() == segments[i].getY())) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+int Map::getScore() {
+	return score;
 }
